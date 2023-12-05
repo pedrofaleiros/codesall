@@ -1,0 +1,12 @@
+CONTEÚDO:
+	Tasks
+	Filas
+	Semáforos (binario, contador, mutex)
+	Timers
+	Grupo de Eventos
+
+Questão:
+Elabore um programa com 3 tasks que façam:
+a) piscar LED a cada 500ms
+b) Incrementar contador (zerado no inicio)
+c) Ler um sensor de temperatura a cada 200ms e enviar p serial

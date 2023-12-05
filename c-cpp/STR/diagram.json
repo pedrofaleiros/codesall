@@ -1,0 +1,53 @@
+{
+	"version": 1,
+	"author": "Pedro Costa Resende Faleiros",
+	"editor": "wokwi",
+	"parts": [
+	  { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": -4.76, "attrs": {} },
+	  { "type": "wokwi-led", "id": "led1", "top": 54, "left": 176.6, "attrs": { "color": "red" } },
+	  { "type": "wokwi-led", "id": "led2", "top": 54, "left": 234.2, "attrs": { "color": "blue" } },
+	  {
+		"type": "wokwi-resistor",
+		"id": "r1",
+		"top": 138.35,
+		"left": 144,
+		"attrs": { "value": "1000" }
+	  },
+	  {
+		"type": "wokwi-resistor",
+		"id": "r2",
+		"top": 157.55,
+		"left": 144,
+		"attrs": { "value": "1000" }
+	  },
+	  {
+		"type": "wokwi-resistor",
+		"id": "r3",
+		"top": 253.55,
+		"left": 38.4,
+		"attrs": { "value": "1000" }
+	  },
+	  {
+		"type": "wokwi-pushbutton",
+		"id": "btn1",
+		"top": 227,
+		"left": 134.4,
+		"attrs": { "color": "green" }
+	  }
+	],
+	"connections": [
+	  [ "esp:TX", "$serialMonitor:RX", "", [] ],
+	  [ "esp:RX", "$serialMonitor:TX", "", [] ],
+	  [ "esp:5V", "r3:1", "red", [ "h-14.21", "v57.6" ] ],
+	  [ "r3:2", "btn1:2.l", "green", [ "v0" ] ],
+	  [ "esp:18", "btn1:2.l", "green", [ "h14.44", "v144" ] ],
+	  [ "btn1:1.l", "esp:GND.2", "green", [ "h-9.6", "v-211.2", "h-9.6" ] ],
+	  [ "esp:2", "r2:1", "green", [ "h0" ] ],
+	  [ "r2:2", "led2:A", "green", [ "v0", "h56.4" ] ],
+	  [ "esp:4", "r1:1", "green", [ "h0" ] ],
+	  [ "r1:2", "led1:A", "green", [ "v0" ] ],
+	  [ "led1:C", "esp:GND.2", "green", [ "v0", "h-57.2", "v-67.2" ] ],
+	  [ "led2:C", "esp:GND.2", "green", [ "v0", "h-28.4", "v-67.2" ] ]
+	],
+	"dependencies": {}
+  }

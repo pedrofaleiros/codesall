@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^1.6.1",
+    "jsencrypt": "^3.3.2",
+    "node-jsencrypt": "^1.0.0",
+    "qs": "^6.11.2"
+  }
+}
